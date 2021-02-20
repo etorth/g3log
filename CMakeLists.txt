@@ -158,6 +158,10 @@ if(MINGW)
   add_definitions(-DMINGW_HAS_SECURE_API)
 endif()
 
+IF(MSVC)
+    INCLUDE(${g3log_SOURCE_DIR}/CPackLists.txt)
+ENDIF()
+
 if(NOT MSVC)
   message(
     STATUS
